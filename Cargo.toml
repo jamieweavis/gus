@@ -1,0 +1,18 @@
+[package]
+name = "gus"
+version = "1.0.0"
+edition = "2024"
+description = "🐻 Git user switcher for quickly switching between local git users"
+authors = ["Jamie Weavis"]
+repository = "https://github.com/jamieweavis/gus"
+
+[dependencies]
+colored = "3.0.0"
+serde = { version = "1.0", features = ["derive"] }
+toml = "0.8"
+
+[profile.release] # Reduce built binary size
+opt-level = "z"
+lto = true
+codegen-units = 1
+strip = true
