@@ -11,6 +11,26 @@ Coming soon!
 
 ## Usage
 
+### Help
+
+Print usage and package information:
+
+```sh
+$ gus
+
+gus 1.0.0 (https://github.com/jamieweavis/gus)
+
+🐻 Git user switcher for quickly switching between local git users
+
+Usage: gus <command>
+
+COMMANDS
+  <id>       Switch to user with the provided ID
+  -          Switch to the previous user
+  list, ls   List users and their IDs
+  config     Open `~/.config/gus.toml` in your $EDITOR
+```
+
 ### Switch
 
 Switch to a user by their ID:
@@ -33,7 +53,6 @@ List users configured in your gus config file:
 
 ```sh
 $ gus ls
-
 * 0: Johnny <john.doe@gmail.com>
   1: John Doe <john.doe@corporation.io>
 ```
@@ -46,25 +65,41 @@ Edit your gus config file in your configured shell `$EDITOR` (alternatively you 
 $ gus edit
 ```
 
-### Help
+## Configuration
 
-Print usage and package information:
+When you run `gus` for the first time a `.config/gus.toml` file is created in your home directory. This file is used by gus to store your git users and is prepopulated with a your current git user.
 
-```sh
-$ gus
+As this is a Rust project, the config file is in [TOML](https://toml.io/en/) format. The config file is structured as follows:
 
-gus 1.0.0 (https://github.com/jamieweavis/gus)
+### Initial config file
 
-🐻 Git user switcher for quickly switching between local git users
+```toml
+previous_user = 0
+current_user = 0
 
-Usage: gus <command>
-
-COMMANDS
-  <id>       Switch to user with the provided ID
-  -          Switch to the previous user
-  list, ls   List users and their IDs
-  config     Open `~/.config/gus.toml` in your $EDITOR
+[[users]]
+name = "<your current git user name>"
+email = "<your current git user email>"
 ```
+
+Additional users can be added to the users array using by [Array of Tables](https://toml.io/en/v1.0.0#array-of-tables) syntax:
+
+### Example config file
+
+```toml
+previous_user = 1
+current_user = 0
+
+[[users]]
+name = "Johnny"
+email = "john.doe@gmail.com"
+
+[[users]]
+name = "John Doe"
+email = "john.doe@company.com"
+```
+
+_The `previous_user` and `current_user` fields are updated by gus when you switch users - you should not edit these fields._
 
 ## Building Locally
 
@@ -103,38 +138,6 @@ Uninstall the binary from your local cargo bin
 ```sh
 cargo uninstall gus
 ```
-
-## Configuration
-
-When you run `gus` for the first time a `.config/gus.toml` file is created in your home directory. This file is used by gus to store your git users and is prepopulated with a your current git user.
-
-### Initial config file
-
-```toml
-previous_user = 0
-current_user = 0
-
-[[users]]
-name = "<your current git user name>"
-email = "<your current git user email>"
-```
-
-### Example config file
-
-```toml
-previous_user = 1
-current_user = 0
-
-[[users]]
-name = "Johnny"
-email = "john.doe@gmail.com"
-
-[[users]]
-name = "John Doe"
-email = "john.doe@company.com"
-```
-
-_The `previous_user` and `current_user` fields are updated by gus when you switch users - you should not edit these fields._
 
 ## Built With
 
