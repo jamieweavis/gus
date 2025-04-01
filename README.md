@@ -73,7 +73,7 @@ $ gus edit
 
 ## Configuration
 
-When you run `gus` for the first time a `.config/gus.toml` file is created in your home directory. This file is used by gus to store your git users and is prepopulated with a your current git user.
+When you run `gus` for the first time a `~/.config/gus.toml` file is created. This file is used by gus to store your git users and is prepopulated with a your current git user.
 
 As this is a Rust project, the config file is in [TOML](https://toml.io/en/) format. The config file is structured as follows:
 
@@ -88,7 +88,7 @@ name = "<your current git user name>"
 email = "<your current git user email>"
 ```
 
-Additional users can be added to the users array using by [Array of Tables](https://toml.io/en/v1.0.0#array-of-tables) syntax:
+Additional users can be added to the users array by using [Array of Tables](https://toml.io/en/v1.0.0#array-of-tables) syntax:
 
 ### Example config file
 
@@ -105,19 +105,19 @@ name = "John Doe"
 email = "john.doe@company.com"
 ```
 
-_The `previous_user` and `current_user` fields are updated by gus when you switch users - you should not edit these fields._
+_The `previous_user` and `current_user` fields are updated by gus when you switch users - you should not edit these fields manually._
 
 ## Building Locally
 
 ### Production
 
-Build a release version of the application
+Compile a release binary of gus:
 
 ```sh
 cargo build --release
 ```
 
-Run the application in release mode
+Run the release binary:
 
 ```sh
 cargo run --release
@@ -125,7 +125,7 @@ cargo run --release
 
 ### Development
 
-Run the application in development mode
+Run gus in development mode:
 
 ```sh
 cargo run
@@ -133,13 +133,13 @@ cargo run
 
 ### Install
 
-Install the binary to your local cargo bin
+Install the binary to your local crates:
 
 ```sh
 cargo install --path .
 ```
 
-Uninstall the binary from your local cargo bin
+Uninstall the binary from your local crates:
 
 ```sh
 cargo uninstall gus
