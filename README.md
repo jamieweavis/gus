@@ -151,7 +151,11 @@ cargo uninstall gus
 
 ## Disclaimer
 
-I'm not a Rust engineer, this is just for fun! 😄
+I'm not a Rust engineer, this is just for fun!
+
+## Related
+
+- [homebrew-gus](https://github.com/jamieweavis/homebrew-gus) - 🍺 Brew tap & formula for gus
 
 ## License
 
