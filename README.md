@@ -8,7 +8,12 @@
 
 ## Installation
 
-Coming soon!
+Install via [Homebrew](https://brew.sh):
+
+```sh
+brew tap jamieweavis/gus
+brew install gus
+```
 
 ## Usage
 
