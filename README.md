@@ -3,6 +3,7 @@
 > 🐻 Git user switcher for quickly switching between local git users
 
 [![ci](https://github.com/jamieweavis/gus/actions/workflows/ci.yml/badge.svg)](https://github.com/jamieweavis/gus/actions)
+[![downloads](https://img.shields.io/github/downloads/jamieweavis/gus/total)](https://github.com/jamieweavis/gus/releases)
 [![version](https://img.shields.io/github/v/release/jamieweavis/gus)](https://github.com/jamieweavis/gus/releases)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jamieweavis/gus/blob/main/LICENSE)
 
