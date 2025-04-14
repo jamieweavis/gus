@@ -59,7 +59,7 @@ Print usage and package information:
 ```sh
 $ gus
 
-gus 1.0.0 (https://github.com/jamieweavis/gus)
+gus 1.0.1 (https://github.com/jamieweavis/gus)
 
 Git User Switcher - Simple command line utility for quickly/easily switching between local git users
 
