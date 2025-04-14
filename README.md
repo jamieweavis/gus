@@ -12,8 +12,7 @@ Git User Switcher - Simple command line utility for quickly/easily switching bet
 Install via [Homebrew](https://brew.sh) (currently macOS only):
 
 ```sh
-brew tap jamieweavis/gus
-brew install gus
+brew install jamieweavis/tap/gus
 ```
 
 ## Usage
