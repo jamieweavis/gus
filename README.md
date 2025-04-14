@@ -155,7 +155,7 @@ I'm not a Rust engineer, this is just for fun!
 
 ## Related
 
-- [homebrew-gus](https://github.com/jamieweavis/homebrew-gus) - Brew tap & formula for gus - Git User Switcher
+- [jamieweavis/homebrew-tap](https://github.com/jamieweavis/homebrew-tap) - Homebrew tap for my brew formulae
 
 ## License
 
