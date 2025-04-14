@@ -35,7 +35,7 @@ Switched git user to: John Doe <john.doe@corporation.io>
 
 ### List
 
-List users configured in your gus config file:
+List users in your `gus` config:
 
 ```sh
 $ gus ls
@@ -45,11 +45,14 @@ $ gus ls
 
 ### Edit
 
-Edit your gus config file in your configured shell `$EDITOR` (alternatively you can manually edit the file at `~/.config/gus.toml`, see the [Configuration](#configuration) section for more details):
+Edit your `gus` config in your configured `$EDITOR`:
 
 ```sh
 $ gus edit
 ```
+
+> [!NOTE]
+> Alternatively you can edit the file at `~/.config/gus.toml` - see the [configuration](#configuration) section for more details
 
 ### Help
 
@@ -73,11 +76,11 @@ COMMANDS
 
 ## Configuration
 
-When you run `gus` for the first time a `~/.config/gus.toml` file is created. This file is used by gus to store your git users and is prepopulated with a your current git user.
+When you run `gus` for the first time a `~/.config/gus.toml` file is created. This file is used to store your git users and is prepopulated with a your current git user.
 
-As this is a Rust project, the config file is in [TOML](https://toml.io/en/) format. The config file is structured as follows:
+As this is a Rust project, the config file is in [TOML](https://toml.io/en/) format and is structured as follows:
 
-### Initial config file
+### Initial Config
 
 ```toml
 previous_user = 0
@@ -90,7 +93,7 @@ email = "<your current git user email>"
 
 Additional users can be added to the users array by using [Array of Tables](https://toml.io/en/v1.0.0#array-of-tables) syntax:
 
-### Example config file
+### Example Config
 
 ```toml
 previous_user = 1
@@ -104,14 +107,14 @@ email = "john.doe@gmail.com"
 name = "John Doe"
 email = "john.doe@company.com"
 ```
-
-_The `previous_user` and `current_user` fields are updated by gus when you switch users - you should not edit these fields manually._
+> [!WARNING]
+> The `previous_user` and `current_user` fields are updated by gus when you switch users - don't manually edit these fields!
 
 ## Building Locally
 
 ### Production
 
-Compile a release binary of gus:
+Compile a release binary:
 
 ```sh
 cargo build --release
@@ -125,7 +128,7 @@ cargo run --release
 
 ### Development
 
-Run gus in development mode:
+Run in development mode:
 
 ```sh
 cargo run
@@ -133,13 +136,13 @@ cargo run
 
 ### Install
 
-Install the binary to your local crates:
+Install the binary to your system:
 
 ```sh
 cargo install --path .
 ```
 
-Uninstall the binary from your local crates:
+Uninstall the binary from your system:
 
 ```sh
 cargo uninstall gus
@@ -147,7 +150,7 @@ cargo uninstall gus
 
 ## Disclaimer
 
-I'm not a Rust engineer, this is just for fun!
+I'm not a Rust developer, this is just for fun!
 
 ## Built With
 
