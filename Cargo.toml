@@ -2,7 +2,7 @@
 name = "gus"
 version = "1.0.0"
 edition = "2024"
-description = "🐻 Git user switcher for quickly switching between local git users"
+description = "Git User Switcher - Simple command line utility for quickly/easily switching between local git users"
 authors = ["Jamie Weavis"]
 repository = "https://github.com/jamieweavis/gus"
 

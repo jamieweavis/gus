@@ -1,6 +1,6 @@
 # gus
 
-> 🐻 Git user switcher for quickly switching between local git users
+Git User Switcher - Simple command line utility for quickly/easily switching between local git users
 
 [![ci](https://github.com/jamieweavis/gus/actions/workflows/ci.yml/badge.svg)](https://github.com/jamieweavis/gus/actions)
 [![downloads](https://img.shields.io/github/downloads/jamieweavis/gus/total)](https://github.com/jamieweavis/gus/releases)
@@ -9,7 +9,7 @@
 
 ## Installation
 
-Install via [Homebrew](https://brew.sh):
+Install via [Homebrew](https://brew.sh) (currently macOS only):
 
 ```sh
 brew tap jamieweavis/gus
@@ -17,26 +17,6 @@ brew install gus
 ```
 
 ## Usage
-
-### Help
-
-Print usage and package information:
-
-```sh
-$ gus
-
-gus 1.0.0 (https://github.com/jamieweavis/gus)
-
-🐻 Git user switcher for quickly switching between local git users
-
-Usage: gus <command>
-
-COMMANDS
-  <id>       Switch to user with the provided ID
-  -          Switch to the previous user
-  list, ls   List users and their IDs
-  config     Open `~/.config/gus.toml` in your $EDITOR
-```
 
 ### Switch
 
@@ -66,10 +46,30 @@ $ gus ls
 
 ### Edit
 
-Edit your gus config file in your configured shell `$EDITOR` (alternatively you can manually edit the file at `~/.config/gus.toml`, see the [configuration](#configuration) section for more details):
+Edit your gus config file in your configured shell `$EDITOR` (alternatively you can manually edit the file at `~/.config/gus.toml`, see the [Configuration](#configuration) section for more details):
 
 ```sh
 $ gus edit
+```
+
+### Help
+
+Print usage and package information:
+
+```sh
+$ gus
+
+gus 1.0.0 (https://github.com/jamieweavis/gus)
+
+Git User Switcher - Simple command line utility for quickly/easily switching between local git users
+
+Usage: gus <command>
+
+COMMANDS
+  <id>       Switch to user with the provided ID
+  -          Switch to the previous user
+  list, ls   List users and their IDs
+  config     Open `~/.config/gus.toml` in your $EDITOR
 ```
 
 ## Configuration
@@ -146,17 +146,17 @@ Uninstall the binary from your local crates:
 cargo uninstall gus
 ```
 
-## Built With
-
-- [Rust](https://github.com/rust-lang/rust)
-
 ## Disclaimer
 
 I'm not a Rust engineer, this is just for fun!
 
+## Built With
+
+- [Rust](https://github.com/rust-lang/rust)
+
 ## Related
 
-- [homebrew-gus](https://github.com/jamieweavis/homebrew-gus) - 🍺 Brew tap & formula for gus
+- [homebrew-gus](https://github.com/jamieweavis/homebrew-gus) - Brew tap & formula for gus - Git User Switcher
 
 ## License
 
